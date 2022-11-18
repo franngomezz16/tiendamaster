@@ -59,7 +59,12 @@
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= ROOT ?>shop/logout" class="nav-link">Salir</a>
+                        <?php if(isset($_SESSION['user']) && $_SESSION['cartTotal'] >= 0): ?>
+                            <a href="<?= ROOT ?>shop/logout" class="btn btn-danger ms-5">Salir</a>
+                        <?php else : ?>
+                            <a href="<?= ROOT ?>login" class="btn btn-secondary ms-5">Login</a>
+                            <a href="<?= ROOT ?>login" class="btn btn-primary ms-5">Register</a>
+                        <?php endif; ?>
                     </li>
                 </ul>
             </div>
