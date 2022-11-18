@@ -10,68 +10,51 @@
     </nav>
     <div class="card-header">
         <h1>Datos de envío</h1>
-        <p>Por favor, compruebe los datos de envío y cambie lo que considere necesario</p>
+        <p>Por favor, compruebe los datos de envío</p>
     </div>
     <div class="card-body">
-        <form action="<?= ROOT ?>cart/paymentmode/" method="POST">
+
             <div class="form-group text-left">
-                <label for="first_name">Nombre:</label>
-                <input type="text" name="first_name" id="first_name" class="form-control"
-                       required placeholder="Escriba su nombre"
-                       value="<?= $data['data']->first_name ?? '' ?>">
+                <h5>Nombre:</h5>
+                <p><?= $data['data']->first_name ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="last_name_1">Primer apellido:</label>
-                <input type="text" name="last_name_1" id="last_name_1" class="form-control"
-                       required placeholder="Escriba su primer apellido"
-                       value="<?= $data['data']->last_name_1 ?? '' ?>">
+                <h5>Primer apellido:</h5>
+                <p><?= $data['data']->last_name_1 ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="last_name_2">Segundo apellido:</label>
-                <input type="text" name="last_name_2" id="last_name_2" class="form-control"
-                       placeholder="Escriba su segundo apellido"
-                       value="<?= $data['data']->last_name_2 ?? '' ?>">
+                <h5>Segundo apellido:</h5>
+                <p><?= $data['data']->last_name_2 ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" name="email" id="email" class="form-control"
-                       required placeholder="Escriba su correo electrónico"
-                       value="<?= $data['data']->email ?? '' ?>">
+                <h5>Correo electrónico:</h5>
+                <p><?= $data['data']->email ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="address">Dirección:</label>
-                <input type="text" name="address" id="address" class="form-control"
-                       required placeholder="Escriba su dirección"
-                       value="<?= $data['data']->address ?? '' ?>">
+                <h5>Dirección:</h5>
+                <p><?= $data['data']->address ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="city">Ciudad:</label>
-                <input type="text" name="city" id="city" class="form-control"
-                       required placeholder="Escriba su ciudad"
-                       value="<?= $data['data']->city ?? '' ?>">
+                <h5>Ciudad:</h5>
+                <p><?= $data['data']->city ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="state">Provincia:</label>
-                <input type="text" name="state" id="state" class="form-control"
-                       required placeholder="Escriba su provincia"
-                       value="<?= $data['data']->state ?? '' ?>">
+                <h5>Provincia:</h5>
+                <p><?= $data['data']->state ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="postcode">Código postal:</label>
-                <input type="text" name="postcode" id="postcode" class="form-control"
-                       required placeholder="Escriba su código postal"
-                       value="<?= $data['data']->zipcode ?? '' ?>">
+                <h5>Código postal:</h5>
+                <p><?= $data['data']->zipcode ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <label for="country">País:</label>
-                <input type="text" name="country" id="country" class="form-control"
-                       required placeholder="Escriba su país"
-                       value="<?= $data['data']->country ?? '' ?>">
+                <h5>País:</h5>
+                <p><?= $data['data']->country ?? '' ?></p>
             </div>
             <div class="form-group text-left">
-                <input type="submit" value="Enviar datos" class="btn btn-success">
+                <a class="btn btn-primary" href="<?= ROOT ?>cart/changeAddress">Cambiar dirección de envio</a>
+                <a class="btn btn-success ms-2" href="<?= ROOT ?>cart/paymentmode">Enviar datos</a>
             </div>
-        </form>
+
     </div>
 
 </div>

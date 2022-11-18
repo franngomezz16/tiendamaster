@@ -59,6 +59,16 @@ class Cart
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function paymentMode()
+    {
+        $sql = 'SELECT * FROM payment';
+        $query = $this->db->prepare($sql);
+        $query->execute();
+
+        return $query->fetchAll(PDO::FETCH_OBJ);
+
+    }
+
     public function update($user, $product, $quantity)
     {
         $sql = 'UPDATE carts SET quantity=:quantity WHERE user_id=:user_id AND product_id=:product_id';
