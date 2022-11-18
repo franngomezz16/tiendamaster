@@ -78,6 +78,11 @@
                     <a href="<?= ROOT ?>adminProduct" class="nav-link">Productos</a>
                 </li>
             </ul>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: 1300px;">
+                <li class="nav-item">
+                    <a href="<?= ROOT ?>admin/logout" class="btn btn-danger ms-5";">Salir</a>
+                </li>
+            </ul>
         <?php endif; ?>
     </div>
 </nav>
